@@ -1,0 +1,14 @@
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\bin\Debug\net8.0\CustomAuthenticatorServerDotNet.exe
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\bin\Debug\net8.0\CustomAuthenticatorServerDotNet.deps.json
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\bin\Debug\net8.0\CustomAuthenticatorServerDotNet.runtimeconfig.json
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\bin\Debug\net8.0\CustomAuthenticatorServerDotNet.dll
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\bin\Debug\net8.0\CustomAuthenticatorServerDotNet.pdb
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.AssemblyInfoInputs.cache
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.AssemblyInfo.cs
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.csproj.CoreCompileInputs.cache
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.dll
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\refint\CustomAuthenticatorServerDotNet.dll
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.pdb
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.genruntimeconfig.cache
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\ref\CustomAuthenticatorServerDotNet.dll
