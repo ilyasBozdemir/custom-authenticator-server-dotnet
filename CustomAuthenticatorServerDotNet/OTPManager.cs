@@ -10,7 +10,7 @@ public class OTPManager
     private static ulong _startTime;
     private static int _digitLength = 6;
     private static int _windowSize = 3;
-    private static int _intervalLength = 15;
+    private static int _intervalLength = 10;
 
 
     public static int DigitLength
@@ -98,6 +98,7 @@ public class OTPManager
         return false;
     }
 
+
     public static bool IsExpired(ulong elapsedTime)
     {
         if (elapsedTime >= (ulong)_intervalLength)
@@ -118,7 +119,9 @@ public class OTPManager
 
     public static ulong GetCurrentTime()
     {
-        return (ulong)(DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds;
+        TimeSpan unixTimeSpan = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+        return Convert.ToUInt64(unixTimeSpan.TotalSeconds);
     }
 
     private static ulong GetStartTime()
@@ -128,6 +131,10 @@ public class OTPManager
 
     public static ulong GetCurrentCounter()
     {
-        return (ulong)((DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds / _intervalLength);
+        TimeSpan unixTimeSpan = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+        return Convert.ToUInt64(unixTimeSpan.TotalSeconds / _intervalLength);
+
+        //return (ulong)((DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds / _intervalLength);
     }
 }

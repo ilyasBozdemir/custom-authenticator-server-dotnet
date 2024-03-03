@@ -12,3 +12,4 @@ D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\
 D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.pdb
 D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.genruntimeconfig.cache
 D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\ref\CustomAuthenticatorServerDotNet.dll
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.sourcelink.json

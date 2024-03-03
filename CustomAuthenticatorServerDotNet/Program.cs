@@ -1,5 +1,7 @@
 ﻿using CustomAuthenticatorServerDotNet;
 
+
+
 Console.ForegroundColor = ConsoleColors.Title;
 Console.WriteLine("=== Custom Authenticator Server ===".ToUpper());
 Console.WriteLine();
