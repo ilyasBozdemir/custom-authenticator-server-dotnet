@@ -13,3 +13,7 @@ D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\
 D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.genruntimeconfig.cache
 D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\ref\CustomAuthenticatorServerDotNet.dll
 D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.sourcelink.json
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\bin\Debug\net8.0\QRCoder.dll
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\bin\Debug\net8.0\zxing.dll
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.csproj.AssemblyReference.cache
+D:\Github\Me\custom-authenticator-server-dotnet\CustomAuthenticatorServerDotNet\obj\Debug\net8.0\CustomAuthenticatorServerDotNet.csproj.CopyComplete

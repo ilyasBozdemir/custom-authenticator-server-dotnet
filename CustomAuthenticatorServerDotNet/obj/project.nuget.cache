@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ARBkut678QAZwfRHCrUq74h99VRpwdsnguRUam/0aJDLVy8xCeNggTvFnpSOCBMXrU7dUhdolUNLjpEUyD3WTQ==",
+  "dgSpecHash": "Mf/FZQFfXGGshVpWumxVjauKbarloiLxbzqIQSemN+5zDPNj4f3F71v1USLNLvZB5ifRoYYg7qhRQtFQtFHzmA==",
   "success": true,
   "projectFilePath": "D:\\Github\\Me\\custom-authenticator-server-dotnet\\CustomAuthenticatorServerDotNet\\CustomAuthenticatorServerDotNet.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ilyas bozdemir\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
+    "C:\\Users\\ilyas bozdemir\\.nuget\\packages\\zxing.net\\0.16.9\\zxing.net.0.16.9.nupkg.sha512"
+  ],
   "logs": []
 }

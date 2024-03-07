@@ -4,6 +4,9 @@ string secret = SecretGenerator.GenerateSecret();
 var counter = OTPManager.GetCurrentCounter();
 string otp = OTPManager.GenerateOTP(secret, counter);
 bool authenticationSuccess = false;
+string userInput;
+bool isValid = false;
+
 DateTime nextOTPUpdateTime = DateTime.UtcNow.AddSeconds(OTPManager.IntervalLength);
 
 
@@ -35,9 +38,23 @@ while (!authenticationSuccess)
         ConsoleHelper.WriteColored(otp + "\n", ConsoleColors.Default);
         nextOTPUpdateTime = DateTime.UtcNow.AddSeconds(OTPManager.IntervalLength);
     }
-    ConsoleHelper.WriteColored("Enter the OTP from your authenticator app:", ConsoleColors.Prompt);
 
-    string userInput = Console.ReadLine();
+    do
+    {
+        ConsoleHelper.WriteColored("Enter the OTP from your authenticator app:", ConsoleColors.Default);
+        Console.ForegroundColor = ConsoleColors.Prompt;
+
+        userInput = Console.ReadLine();
+        isValid = CheckInput(userInput);
+   
+    }
+    while (!isValid);
+
+
+
+    Console.ForegroundColor = ConsoleColors.Default;
+    Console.WriteLine();
+
 
     if (OTPManager.ValidateOTP(secret, userInput, out int remainingSeconds))
     {
@@ -63,5 +80,25 @@ while (!authenticationSuccess)
 
     }
 }
+
+static bool CheckInput(string input)
+{
+    if (input.Length != 6)
+    {
+        ConsoleHelper.WriteColored("Girdiğiniz sayı 6 karakterden oluşmalıdır.\n", ConsoleColors.Error);
+        return false;
+    }
+
+    foreach (char c in input)
+    {
+        if (!char.IsDigit(c))
+        {
+            ConsoleHelper.WriteColored("Girdiğiniz sayı sadece rakamlardan oluşmalıdır.\n", ConsoleColors.Error);
+            return false;
+        }
+    }
+    return true;
+}
+
 
 Console.ReadLine();
