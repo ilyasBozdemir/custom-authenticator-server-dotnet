@@ -7,7 +7,7 @@ string otp = OTPManager.GenerateOTP(secret, counter);
 bool authenticationSuccess = false;
 string userInput;
 bool isValid = false;
-
+OTPUriBuilder uriBuilder = new OTPUriBuilder();
 DateTime nextOTPUpdateTime = DateTime.UtcNow.AddSeconds(OTPManager.IntervalLength);
 
 
@@ -53,9 +53,6 @@ while (!authenticationSuccess)
     }
     while (!isValid);
 
-
-
-    Console.ForegroundColor = ConsoleColors.Default;
     Console.WriteLine();
 
 
@@ -68,22 +65,19 @@ while (!authenticationSuccess)
 
         var list = recoveryCodeGenerator.GenerateRecoveryCodes();
         Console.ForegroundColor = ConsoleColors.Default;
-
-        OTPUriBuilder uriBuilder = new OTPUriBuilder();
-
-
         var qrcodeUri = uriBuilder.GenerateQrCodeUri(secret, "İlyas Bozdemir", "bozdemir.ib70@gmail.com");
 
         (string sharedKey, string title, string email) = uriBuilder.DecodeQrCodeUri(qrcodeUri);
 
-        Console.WriteLine($"{qrcodeUri}");
-        Console.WriteLine();
-        Console.WriteLine($"{sharedKey} -  {title} - {email}");
+        Console.WriteLine($"qrcodeUri:\"{qrcodeUri}\"\n");
+        ConsoleHelper.WriteColoredLine("bu uri ile qrcode olusturup 30 sn de bir üretilen kod ile dogrulama yapabilirsiniz.", ConsoleColors.Info);
+        ConsoleHelper.WriteColoredLine("sadece çalışma mantığı ele alınmıştır.", ConsoleColors.Info);
+        ConsoleHelper.WriteColoredLine("dogrulama yaparken secret keyin static olmasına dikkat edin bu uygulama her run edilince key değişmektedir.", ConsoleColors.Warning);
+        Console.WriteLine($"sharedKey:{sharedKey} title:{title}  email:{email}");
 
-        Console.WriteLine("=== Recovery Code ===");
-        Console.WriteLine();
+        Console.WriteLine("=== Recovery Code ===\n");
         foreach (var item in list)
-            Console.WriteLine(item);
+            ConsoleHelper.WriteColoredLine(item, ConsoleColors.Success);
         Console.WriteLine();
     }
     else

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CustomAuthenticatorServerDotNet;
+﻿namespace CustomAuthenticatorServerDotNet;
 public class RecoveryCodeGenerator
 {
     public List<string> GenerateRecoveryCodes()
@@ -24,7 +21,7 @@ public class RecoveryCodeGenerator
 
     private string GenerateRandomHexCode(Random random, int length)
     {
-        const string chars = "0123456789abcdef";
+        const string chars = "0123456789abcdef";// hex chars
         var codeChars = new char[length];
 
         for (int i = 0; i < length; i++)

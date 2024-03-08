@@ -1,7 +1,4 @@
-﻿
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
-using System.Web;
+﻿using System.Web;
 
 namespace CustomAuthenticatorServerDotNet;
 
