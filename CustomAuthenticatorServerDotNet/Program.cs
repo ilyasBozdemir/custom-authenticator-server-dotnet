@@ -1,5 +1,6 @@
 ﻿using CustomAuthenticatorServerDotNet;
 
+
 string secret = SecretGenerator.GenerateSecret();
 var counter = OTPManager.GetCurrentCounter();
 string otp = OTPManager.GenerateOTP(secret, counter);
@@ -37,6 +38,8 @@ while (!authenticationSuccess)
         ConsoleHelper.WriteColored("Generated OTP :", ConsoleColors.Default);
         ConsoleHelper.WriteColored(otp + "\n", ConsoleColors.Default);
         nextOTPUpdateTime = DateTime.UtcNow.AddSeconds(OTPManager.IntervalLength);
+
+   
     }
 
     do
@@ -65,6 +68,17 @@ while (!authenticationSuccess)
 
         var list = recoveryCodeGenerator.GenerateRecoveryCodes();
         Console.ForegroundColor = ConsoleColors.Default;
+
+        OTPUriBuilder uriBuilder = new OTPUriBuilder();
+
+
+        var qrcodeUri = uriBuilder.GenerateQrCodeUri(secret, "İlyas Bozdemir", "bozdemir.ib70@gmail.com");
+
+        (string sharedKey, string title, string email) = uriBuilder.DecodeQrCodeUri(qrcodeUri);
+
+        Console.WriteLine($"{qrcodeUri}");
+        Console.WriteLine();
+        Console.WriteLine($"{sharedKey} -  {title} - {email}");
 
         Console.WriteLine("=== Recovery Code ===");
         Console.WriteLine();
@@ -99,6 +113,8 @@ static bool CheckInput(string input)
     }
     return true;
 }
+
+
 
 
 Console.ReadLine();
